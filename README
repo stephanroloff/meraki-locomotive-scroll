@@ -1,6 +1,4 @@
 Requisitos
 
 TODOS:
-arreglar 
-add_action('enqueue_block_editor_assets', array($this, 'my_custom_gutenberg_scripts'));
-para que solo se haga el enqueue en el editor.
+Fijar el trigger del efecto parallax.
