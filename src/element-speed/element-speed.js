@@ -8,13 +8,13 @@ export default function elementSpeed(elementSelector, speed){
 
     elements.forEach(element => {
         
-        // Guarda la posición original del h1
+        // Guarda la posición original del elemento respecto al inicion del body (valor fijo)
         let posicionOriginal = element.offsetTop;
       
         // Agrega un evento de desplazamiento
         window.addEventListener('scroll', function() {
-          // console.log('Posicion Original', posicionOriginal);
-          // console.log('Tamano ventana', window.innerHeight);
+          console.log('Posicion Original', posicionOriginal); //valor fijo
+          console.log('Tamano ventana', window.innerHeight); //valor fijo
           // console.log('Posicion actual', window.scrollY);
           
           // Calcula la distancia entre la posición original y la posición actual
@@ -23,7 +23,11 @@ export default function elementSpeed(elementSelector, speed){
           if(posicionOriginal < window.innerHeight){
             distanciaDesdeOriginal = window.scrollY;
           }else{
-            distanciaDesdeOriginal = window.scrollY - (posicionOriginal-(window.innerHeight));
+            //se le resta el window.innerHeight porque el valor de la posicion se considera cuando el elemento toca el marco superior del browser.
+            //sin embargo queremos considerar la altura cuando toca el marco inferior del browser, para eso se le resta window.innerHeight que es la altura del la ventana del browser.
+            // distanciaDesdeOriginal = window.scrollY - (posicionOriginal-(window.innerHeight * -0.5));
+            // distanciaDesdeOriginal = window.scrollY - (posicionOriginal-(window.innerHeight * 0.5));
+            distanciaDesdeOriginal = window.scrollY - (posicionOriginal-(window.innerHeight * 1));
           }
       
           // Asegúrate de que la distancia no sea negativa

@@ -37,8 +37,6 @@ const withMyPluginControls = createHigherOrderComponent( ( BlockEdit ) => {
                             value={attributes.myDropdownValue}
                             options={[
                                 { label: 'None', value: 'none' },
-                                { label: 'Opción 1', value: 'opcion-1' },
-                                { label: 'Opción 2', value: 'opcion-2' },
                                 { label: '0.1', value: 'parallax-01' },
                                 { label: '0.2', value: 'parallax-02' },
                                 { label: '0.3', value: 'parallax-03' },
