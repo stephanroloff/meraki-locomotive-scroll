@@ -1,0 +1,1 @@
+let bodySpeedNumber = 0.45; //Mientras mayor el numero mas pesado
