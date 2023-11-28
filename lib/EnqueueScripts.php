@@ -25,7 +25,7 @@ class EnqueueScriptsLocomotiveScroll {
 
     function my_custom_gutenberg_scripts() {
         // Script personalizado para el editor de Gutenberg
-        wp_enqueue_script('my-gutenberg-scripts', $this->plugin_path . 'build/index.js', array('jquery'), '1.0', true);
+        wp_enqueue_script('my-gutenberg-scripts-meraki-locomotive-scroll', $this->plugin_path . 'build/editor.js', array('jquery'), '1.0', true);
     }
 }
 

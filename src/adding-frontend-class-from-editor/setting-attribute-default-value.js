@@ -2,8 +2,6 @@ import { allowedBlockNames } from "./inputs";
 
 const setDefaultValue = (settings, blockName) => {
 
-    console.log(allowedBlockNames.length);
-
     if (!(allowedBlockNames.length > 0 && (!allowedBlockNames.includes(blockName)))) {
 
         settings.attributes = {
