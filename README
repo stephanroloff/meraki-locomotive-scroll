@@ -1,4 +1,8 @@
 Requisitos
 
 TODOS:
-Fijar el trigger del efecto parallax. (Primero testear un tiempo para ver si es necesario)
+-Fijar el trigger del efecto parallax. (Primero testear un tiempo para ver si es necesario)
+-Construir la opcion de agregar distintos tipos de parallax (desde la derecha, desde la izquierda, hacia arriba, etc)
+-Rotate debe rotar sobre si mismo, Hay un problema ahi con display block, inline.
+-Trabajar la compatibilidad con el Plugin "Animations"
+-Buscar otro lugar para cursor nota musical (Quiza en el Theme?)
