@@ -6,7 +6,15 @@ const setDefaultValue = (settings, blockName) => {
 
         settings.attributes = {
             ...settings.attributes,
-            myDropdownValue: {
+            myDropdownScrollTypeValue: {
+                type: 'string',
+                default: 'none',
+            },
+            myDropdownScrollSpeedValue: {
+                type: 'string',
+                default: 'none',
+            },
+            myDropdownScrollSlownessValue: {
                 type: 'string',
                 default: 'none',
             },

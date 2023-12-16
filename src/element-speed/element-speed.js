@@ -35,7 +35,12 @@ export default function elementSpeed(elementSelector, speed){
       
           // Mueve el elemento a una velocidad diferente
           element.style.position = 'relative';
+          // element.style.transform = `translate3d(0px, -${rate}px, 0px)`;
           element.style.transform = `translate3d(0px, -${rate}px, 0px)`;
+          // element.style.transform = `translate3d(${rate}px, 0px, 0px)`; //nach rechts
+          // element.style.transform = `translate3d(-${rate}px, 0px, 0px)`; //nach links
+          // element.style.transform = `rotate(${rate/40}deg)`; //nach rechts  40 es slowness
+          // element.style.transform = `rotate(-${rate}deg)`; //nach links
         });
     });
 }
