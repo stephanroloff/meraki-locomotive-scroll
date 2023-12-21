@@ -84,6 +84,6 @@ const withMyPluginControls = createHigherOrderComponent( ( BlockEdit ) => {
 
 wp.hooks.addFilter(
     'editor.BlockEdit',
-    'my-plugin/with-inspector-controls',
+    'my-plugin-meraki-locomotive-scroll/with-inspector-controls',
     withMyPluginControls
 );
