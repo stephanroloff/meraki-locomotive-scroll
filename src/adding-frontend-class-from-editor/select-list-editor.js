@@ -17,13 +17,6 @@ const withMyPluginControls = createHigherOrderComponent( ( BlockEdit ) => {
             return <BlockEdit { ...props } />;
         }
 
-        saveData();
-        
-        // // Definir el atributo myDropdownValue si no está definido
-        // if (typeof attributes.myDropdownScrollSpeedValue === 'undefined') {
-        //     setAttributes({ myDropdownScrollSpeedValue: 'none' });
-        // }
-
         return (
             <>
                 <BlockEdit { ...props } />
@@ -37,7 +30,7 @@ const withMyPluginControls = createHigherOrderComponent( ( BlockEdit ) => {
                             label="Scroll Type"
                             value={attributes.myDropdownScrollTypeValue}
                             options={[
-                                { label: 'None', value: 'none' },
+                                { label: 'None', value: '' },
                                 { label: 'Move to Top', value: 'move-to-top' },
                                 { label: 'Move to Bottom', value: 'move-to-bottom' },
                                 { label: 'Move to Right', value: 'move-to-right' },
@@ -52,7 +45,7 @@ const withMyPluginControls = createHigherOrderComponent( ( BlockEdit ) => {
                             label="Speed"
                             value={attributes.myDropdownScrollSpeedValue}
                             options={[
-                                { label: 'None', value: 'none' },
+                                { label: 'None', value: '' },
                                 { label: '0.1', value: 'parallax-01' },
                                 { label: '0.2', value: 'parallax-02' },
                                 { label: '0.3', value: 'parallax-03' },
@@ -64,7 +57,12 @@ const withMyPluginControls = createHigherOrderComponent( ( BlockEdit ) => {
                                 { label: '0.9', value: 'parallax-09' },
                                 { label: '1.0', value: 'parallax-10' },
                             ]}
-                            onChange={(value) => setAttributes({ myDropdownScrollSpeedValue: value })}
+                            onChange={(value) =>
+                                {
+                                    setAttributes({ myDropdownScrollSpeedValue: value })
+                                    saveData();
+                                }
+                            }
                         />
                         <NumberControl
                         label="Slowness"

@@ -18,10 +18,6 @@ const setDefaultValue = (settings, blockName) => {
                 type: 'string',
                 default: 'none',
             },
-            classObject: {
-                type: 'object',
-                default: {},
-            },
             //---------------------------
             //animationsPluginIntegration
             //---------------------------
@@ -51,6 +47,7 @@ const setDefaultValue = (settings, blockName) => {
             },
             //---------------------------
         };
+
         return settings;
         
     }
